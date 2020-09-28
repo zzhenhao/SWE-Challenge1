@@ -1,5 +1,5 @@
 name,salary
-person 1,5860
+person 1,0
 person 2,9618
 person 3,5808
 person 4,4311
@@ -114,6 +114,6 @@ person 112,9529
 person 113,3609
 person 114,4754
 person 115,6298
-person 116,3670
-person 117,7955
-person 118,408
+person 116,9999
+person 117,9999
+person 118,9999

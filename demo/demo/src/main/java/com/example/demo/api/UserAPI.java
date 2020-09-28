@@ -20,25 +20,25 @@ public class UserAPI {
     }
 
 
-    @RequestMapping("/usersParam")
-    public List<User> getUsers(@RequestParam(value="start")Long start, @RequestParam(value="end") Long end)
-    {
-        return userService.getUsers(start, end);
-    }
-
     @RequestMapping("/users")
     public List<User> getUsers()
     {
         return userService.getUsers();
     }
 
-    @RequestMapping("/user/Ascending")
+    @RequestMapping("/usersParam")
+    public List<User> getUsers(@RequestParam(value="start")Long start, @RequestParam(value="end") Long end)
+    {
+        return userService.getUsers(start, end);
+    }
+
+    @RequestMapping("/users/Ascending")
     public List<User> getA_SortedUsers()
     {
         return userService.getSortedUsers(true);
     }
 
-    @RequestMapping("/user/Descending")
+    @RequestMapping("/users/Descending")
     public List<User> getD_SortedUsers()
     {
         return userService.getSortedUsers(false);

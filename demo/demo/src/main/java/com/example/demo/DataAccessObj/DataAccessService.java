@@ -21,7 +21,16 @@ public class DataAccessService implements UserDAO{
 
     @Override
     public List<User> getUsers() {
-        return database;
+       List<User> temp = new ArrayList<>();
+
+       for(User user : database)
+       {
+           if(user.getSalary()>0)
+           {
+               temp.add(new User(user.getName(), user.getSalary()));
+           }
+       }
+       return temp;
     }
 
 
