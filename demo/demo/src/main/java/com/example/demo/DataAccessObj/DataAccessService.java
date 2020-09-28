@@ -4,6 +4,7 @@ import com.example.demo.model.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
@@ -35,6 +36,22 @@ public class DataAccessService implements UserDAO{
             }
         }
        return temp;
+    }
+
+    @Override
+    public List<User> getSortedUsers(boolean pred)
+    {
+        List<User> temp = database;
+        Collections.sort(temp);
+        if(pred)
+        {
+            return temp;
+        }
+        else
+        {
+            Collections.reverse(temp);
+            return temp;
+        }
     }
 
 }

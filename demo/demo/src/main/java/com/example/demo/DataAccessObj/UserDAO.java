@@ -13,5 +13,7 @@ public interface UserDAO {
 
     List<User> getUsers();
 
+    List<User> getSortedUsers(boolean pred);
+
 
 }

@@ -25,4 +25,10 @@ public class UserService {
     public List<User> getUsers() {
         return userDAO.getUsers();
     }
+
+    public List<User> getSortedUsers(boolean pred)
+    {
+        return userDAO.getSortedUsers(pred);
+    }
+
 }

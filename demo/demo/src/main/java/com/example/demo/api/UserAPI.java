@@ -32,4 +32,17 @@ public class UserAPI {
         return userService.getUsers();
     }
 
+    @RequestMapping("/user/Ascending")
+    public List<User> getA_SortedUsers()
+    {
+        return userService.getSortedUsers(true);
+    }
+
+    @RequestMapping("/user/Descending")
+    public List<User> getD_SortedUsers()
+    {
+        return userService.getSortedUsers(false);
+    }
+
+
 }

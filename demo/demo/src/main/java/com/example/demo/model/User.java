@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 
-public class User
+public class User implements Comparable
 {
     private final String name;
     private final Long salary;
@@ -26,5 +26,12 @@ public class User
 
     public Long getSalary() {
         return salary;
+    }
+
+
+    @Override
+    public int compareTo(Object other) {
+        return  this.getSalary().intValue()- ((User)other).getSalary().intValue();
+
     }
 }
