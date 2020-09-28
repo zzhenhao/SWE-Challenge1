@@ -2,7 +2,7 @@
 
 Good day to everyone who is viewing my submission got this SWE mini project.
 This is the first time i am working with java and spring boot so i hope this is working as intended 
-and it meets the specifications providided.
+and it meets the specifications provided.
 
 ## **Acceptance Criteria 1**
 For acceptance criteria 1, the application is supposed to read a CSV file and store them in a database.
