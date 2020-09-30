@@ -50,7 +50,7 @@ public class DataAccessService implements UserDAO{
     @Override
     public List<User> getSortedUsers(boolean pred)
     {
-        List<User> temp = database;
+        List<User> temp = new ArrayList<User>(database);
         Collections.sort(temp);
         if(pred)
         {
