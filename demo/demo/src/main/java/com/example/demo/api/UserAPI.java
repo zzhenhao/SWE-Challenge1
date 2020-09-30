@@ -20,29 +20,26 @@ public class UserAPI {
     }
 
 
-    @RequestMapping("/users")
+    @RequestMapping(value = "/users", method=RequestMethod.GET)
     public List<User> getUsers()
     {
         return userService.getUsers();
     }
 
-    @RequestMapping("/usersParam")
+    @RequestMapping(value = "/users", method=RequestMethod.GET, params = {"start", "end"})
     public List<User> getUsers(@RequestParam(value="start")Long start, @RequestParam(value="end") Long end)
     {
         return userService.getUsers(start, end);
     }
 
-    @RequestMapping("/users/Ascending")
-    public List<User> getA_SortedUsers()
+    @RequestMapping(value = "/users", method=RequestMethod.GET, params = {"Sort"})
+    public List<User> getA_SortedUsers(@RequestParam(value = "Sort") String request)
     {
-        return userService.getSortedUsers(true);
+        if(request.equals("Ascending"))
+            return userService.getSortedUsers(true);
+        else if(request.equals("Descending"))
+            return userService.getSortedUsers(false);
+        else
+            return getUsers();
     }
-
-    @RequestMapping("/users/Descending")
-    public List<User> getD_SortedUsers()
-    {
-        return userService.getSortedUsers(false);
-    }
-
-
 }
