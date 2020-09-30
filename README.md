@@ -11,18 +11,16 @@ can be freely editted for whichever test case required. For this submission, the
 would be name and the corresponding salary.
 
 ## **Acceptance Criteria 2**
-For acceptance criteria 2, the application is supposed to expose an endpoint that returns users with a valid salary(0<=salary<=4000)
-For this criteria, i wasn't sure whether (0<=salary<=4000) is the only criteria to meet for application. Therefore i created several
-endpoints for different criterias.
+For acceptance criteria 2, the application is supposed to expose an endpoint that returns users with a valid salary(e.g. 0<=salary<=4000)
+I created multiple endpoints under /users as i was exploring the different options avaiable from spring boot.
 
 endpoint #1 (/users)
 - This endpoint returns all users with salary > 0
 
-endpoint #2 (/usersParam)
+endpoint #2 (/users)
 - This endpoint takes in 2 parameters (start/end) and will return all users with salary the ranges between the start and end value.
 
-endpoint #3 (/users/Ascending)
-- This endpoint returns the list of users sorted by their salary in ascending order.
+endpoint #3 (/users)
+- This endpoint takes in 1 parameter (sort) and returns the list in the sorted order specified. In this case, the parameter should
+either be "Ascending" or "Descending".
 
-endpoint #4 (/users/Descending)
-- This endpoint returns the list of users sorted by their salary in descending order.
