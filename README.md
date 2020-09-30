@@ -21,6 +21,6 @@ endpoint #2 (/users)
 - This endpoint takes in 2 parameters (start/end) and will return all users with salary the ranges between the start and end value.
 
 endpoint #3 (/users)
-- This endpoint takes in 1 parameter (sort) and returns the list in the sorted order specified. In this case, the parameter should
+- This endpoint takes in 1 parameter (Sort) and returns the list in the sorted order specified. In this case, the parameter should
 either be "Ascending" or "Descending".
 
